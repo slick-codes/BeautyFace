@@ -2,7 +2,8 @@ import './App.css';
 import React from 'react';
 
 // Components
-import Navigation from './components/Navigation'
+import Navigation from './components/Navigation';
+import Header from './components/Header';
 
 class App extends React.Component{
 
@@ -16,6 +17,7 @@ class App extends React.Component{
     return (
       <>
         <Navigation />
+        <Header />
       </>
     );
   }

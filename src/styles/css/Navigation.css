@@ -1,11 +1,9 @@
 
 
 nav{
-    padding:0px 5em;
     display:flex;
     justify-content: center;
     align-items: center;
-    padding-top:1em;
 }
 
 .nav__container{
@@ -25,6 +23,10 @@ nav .logo h1{
     font-size:1.3rem;
 }
 
+nav .logo h1 span{
+    color:var(--cta-color);
+}
+
 nav .navlink a{
     color:black;
     text-decoration:none;
@@ -39,16 +41,65 @@ nav .navlink a{
 }
 
 .navlink label{
-    padding:1em 0;
+    padding:2em 0;
     /* background-color: blue; */
     display:flex;
     flex-flow:column;
+    display:flex;
+    cursor: pointer;    
+}
+
+.navlink label:hover > a{
+    color:var(--cta-color);
+}
+
+.navlink  .dropdown:hover > label a{
+    color:var(--cta-color);
+}
+
+.navlink label.dropdown{
+    align-items:center;
+    display:flex;
+    justify-content:center;
     position:relative;
+}
+.navlink label.dropdown > label{
+    padding:0 1em;
+}
+
+.dropdown:hover > section{
+    transform: translateY(4.5em);
+    opacity:1;
+    pointer-events:all;
+}
+
+.dropdown > section{
+    /* left:0; */
+    opacity: 0;
+    width:50em;
+    height:20em;
+    position:absolute;
+    top:0;
+    margin-left:8em;
+    transform: translateY(7.5em);
+    transition:.3s;
+    pointer-events:none;
+}
+
+.dropdown__content{
+    width:100%;
+    background:rgba(255, 255, 255, 0.859);
+    height:95%;
+    position:absolute;
+    margin-top:1em;
+    box-shadow: 0px 5px 1em 0px #0000008a;
+    border-radius:.3em;
+    cursor: initial;
 }
 
 
-nav section:last-child svg{
-    padding:0 1em;
+.cart svg{
+    padding-left:1em;
 }
 
 nav section:last-child{
@@ -71,7 +122,7 @@ nav section:last-child{
 }
 .search input:focus{
     border:solid 2px var(--cta-color);
-    padding-right:4.5em;
+    padding-right:3.7em;
 }
 
 .search button{
@@ -81,9 +132,12 @@ nav section:last-child{
     border:none;
     background:var(--cta-color);
     color:white;
-    padding:0px .5em;
+    padding:0px 1.2em;
     border-radius:.3em;
     font-size:.8rem;
+    display:flex;
+    justify-content:center;
+    align-items:center;
 }
 
 .cart{
@@ -93,7 +147,7 @@ nav section:last-child{
 .cart__notification{
     height:.8em;
     width:.8em;
-    background-color: var(--cta-color);
+    background-color: var(--redish);
     border-radius: 50em;
     right:.6em;
     top:-.1em;

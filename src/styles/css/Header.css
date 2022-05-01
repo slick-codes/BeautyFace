@@ -1,0 +1,45 @@
+
+img{
+    width:90%;
+}
+
+header{
+    background:var(--cta-color);
+    color:white;
+    display:flex;
+    justify-content:center;
+    align-items: center;
+}
+
+.header__container{
+    max-width: 70em;
+    /* width:65%; */
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.header__text{
+    padding-left:5em;
+
+}
+
+.text__header-text{
+    font-size:3rem;
+    line-height: 1em;
+}
+
+.text__paragraph{
+    padding:1em 0;
+}
+
+.text__button{
+    padding:.8em 1.5em;
+    border:none;
+    background-color: var(--contrast-color);
+    font-weight:bolder;
+    border-radius: var(--radius);
+}
+.header__image{
+    padding-left:1em;
+}

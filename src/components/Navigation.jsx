@@ -1,7 +1,11 @@
 /* eslint-disable react/jsx-no-comment-textnodes */
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faSearch, faCartPlus } from "@fortawesome/free-solid-svg-icons";
+import {
+  faSearch,
+  faCartPlus,
+  faAngleDown,
+} from "@fortawesome/free-solid-svg-icons";
 
 // CSS Importation
 import "../styles/css/Navigation.css";
@@ -14,24 +18,25 @@ class Navigation extends Component {
       <nav className="nav">
         <div className="nav__container">
           <section className="logo">
-            <h1>BeautyFace</h1>
+            <h1>
+              Beauty<span>Face</span>
+            </h1>
           </section>
           <section className="navlink">
-            <label>
+            <label id="activeLink">
               {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
               <a href="#">HOME</a>
             </label>
-            <label>
+            <label class="dropdown">
               {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
-              <a href="#">MEN</a>
-            </label>
-            <label>
-              {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
-              <a href="#">WOMEN</a>
-            </label>
-            <label>
-              {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
-              <a href="#">SHOP</a>
+              <label>
+                <a href="#">
+                  CATIGORIES <FontAwesomeIcon icon={faAngleDown} />{" "}
+                </a>
+              </label>
+              <section>
+                  <div className="dropdown__content"></div>
+              </section>
             </label>
             <label>
               {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
@@ -46,8 +51,8 @@ class Navigation extends Component {
               </button>
             </div>
             <div className="cart">
-                <div className="cart__notification"></div>
-            <FontAwesomeIcon icon={faCartPlus} />
+              <div className="cart__notification"></div>
+              <FontAwesomeIcon icon={faCartPlus} />
             </div>
           </section>
         </div>

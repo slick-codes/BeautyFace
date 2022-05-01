@@ -6,5 +6,12 @@
 }
 
 :root{
-  --cta-color: rgb(231, 10, 21);
+  --cta-color: #286855;
+  --contrast-color: yellow;
+  --redish: rgb(188, 8, 8);
+  --radius: .3em;
+}
+
+#activeLink a{
+  color:var(--cta-color);
 }

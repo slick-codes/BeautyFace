@@ -5,6 +5,7 @@ import {
   faSearch,
   faCartPlus,
   faAngleDown,
+  faNavicon
 } from "@fortawesome/free-solid-svg-icons";
 
 // CSS Importation
@@ -18,9 +19,10 @@ class Navigation extends Component {
       <nav className="nav">
         <div className="nav__container">
           <section className="logo">
-            <h1>
+            <h1 className="desktop">
               Beauty<span>Face</span>
             </h1>
+            <h1 className="mobile">B<span>F</span> </h1>
           </section>
           <section className="navlink">
             <label id="activeLink">
@@ -43,7 +45,7 @@ class Navigation extends Component {
               <a href="#">CONTACT</a>
             </label>
           </section>
-          <section>
+          <section class="cart__config">
             <div className="search">
               <input type="search" placeholder="Search Product" />
               <button>
@@ -55,6 +57,9 @@ class Navigation extends Component {
               <FontAwesomeIcon icon={faCartPlus} />
             </div>
           </section>
+            <section className="navicon mobile">
+                <FontAwesomeIcon icon={faNavicon} />
+            </section>
         </div>
       </nav>
     );

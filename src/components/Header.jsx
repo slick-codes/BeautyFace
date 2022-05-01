@@ -2,7 +2,7 @@ import { Component } from "react";
 
 // CSS | Image
 import "./../styles/css/Header.css";
-import showcase from "./../images/showcase.webp";
+import showcase from "./../images/showcase_4.png";
 
 class Header extends Component {
   render() {

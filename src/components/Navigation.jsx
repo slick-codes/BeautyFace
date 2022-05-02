@@ -1,3 +1,5 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
+/* eslint-disable no-unused-vars */
 /* eslint-disable react/jsx-no-comment-textnodes */
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -7,6 +9,7 @@ import {
   faAngleDown,
   faNavicon,
   faCartFlatbed,
+  faCartArrowDown,
 } from "@fortawesome/free-solid-svg-icons";
 
 // CSS Importation
@@ -31,70 +34,36 @@ const Navigation = function(){
 
     return (
       <>
-        <nav className={ state.navToggle? 'active' : '' }>
-          <div className="search__section">
-            <h1>
-              B<span>F</span>
-            </h1>
-            <div className="search">
-              <section className="logo__section">
-                <div className="search desktop ">
-                  <input type="search" placeholder="Search Product" />
-                  <button>
-                    <FontAwesomeIcon icon={faSearch} />
-                  </button>
-                </div>
-              </section>
-            </div>
-          </div>
-          <div className="nav__container">
-            <section className="logo">
-              <h1 className="desktop">
-                Beauty<span>Face</span>
-              </h1>
-              <h1 className="mobile">
-                <FontAwesomeIcon icon={faCartFlatbed} />
-              </h1>
-            </section>
-            <section className="navlink">
-              <label id="activeLink">
-                {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
-                <a href="#">HOME</a>
-              </label>
-              <label className="dropdown">
-                {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
-                <label>
-                  <a href="#">
-                    CATIGORIES <FontAwesomeIcon icon={faAngleDown} />{" "}
-                  </a>
-                </label>
-                <section>
-                  <div className="dropdown__content"></div>
+        <nav className={ state.navToggle? 'active' : '' }>  
+        <div className="overlay" onClick={toggleNav}></div>
+            <div className="nav__container">
+                <section className="logo">
+                    <h1 className="desktop">Beauty<span>Face</span></h1>
+                    {/* <h1 class="mobile">B<span>F</span></h1> */}
+                    <div className="mobile" onClick={toggleNav}>
+                        <FontAwesomeIcon icon={ faNavicon } />
+                    </div>
                 </section>
-              </label>
-              <label>
-                {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
-                <a href="#">CONTACT</a>
-              </label>
-            </section>
-            <section className="cart__config ">
-              <div className="search desktop ">
-                <input type="search" placeholder="Search Product" />
-                <button>
-                  <FontAwesomeIcon icon={faSearch} />
-                </button>
-              </div>
-              <div className="cart desktop">
-                <div className="cart__notification"></div>
-                <FontAwesomeIcon icon={faCartPlus} />
-              </div>
-            </section>
-            <section className="navicon mobile">
-              <div onClick={ toggleNav }>
-                <FontAwesomeIcon icon={faNavicon} />
-              </div>
-            </section>
-          </div>
+
+                <section className="navsection">
+                <section className="navlink">
+                    <div className="navlink__container">
+                        <label> <a href="#">HOME</a> </label>
+                        <label> <a href="#">CARTIGORIES</a> </label>
+                        <label> <a href="#">CONTACT</a> </label>
+                    </div>
+                </section>
+                    <section className="search">
+                        <div className="search__container">
+                            <input type="text" placeholder="Search Product" />
+                            <button className="search__button"> <FontAwesomeIcon icon={ faSearch }/> </button>
+                        </div>
+                        <div className="cart">
+                            <FontAwesomeIcon icon={faCartArrowDown} />
+                        </div>
+                    </section>
+                </section>
+            </div>
         </nav>
       </>
     );

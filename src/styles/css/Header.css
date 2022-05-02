@@ -58,7 +58,7 @@ img{
     color:var(--cta-color);
 }
 .text__header-text {
-    font-size:3.7rem;
+    font-size:2.7rem;
     line-height:1.1em;
 }
 
@@ -75,7 +75,7 @@ img{
     cursor:pointer;
     width:60%;
 }
-@media (min-width:800px){
+@media (min-width:900px){
     .desktop{
         display:block;
     }
@@ -121,7 +121,8 @@ img{
     }
     .text__header-text{
         /* width:50%; */
-        max-width:7em;
+    font-size:3.7rem;
+    max-width:7em;
     }
     .text__paragraph{
         /* width: 50%; */

@@ -20,7 +20,7 @@
   display: none;
 }
 
-@media (min-width: 800px){
+@media (min-width: 900px){
 
   .mobile{
     display:none;

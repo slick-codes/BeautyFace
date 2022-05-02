@@ -164,8 +164,10 @@ nav.active .navlink {
     /* border:solid 1px black; */
 }
 .catigories > div{
-    background:black;
+    /* background:black; */
     padding:0px .5em;
+    color:black;
+    border:solid .4px rgba(0, 0, 0, 0.506);
 }
 
 .catigories p{

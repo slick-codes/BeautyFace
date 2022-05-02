@@ -63,7 +63,9 @@ img{
 }
 
 .text__paragraph{
-    padding:1em 0;
+    padding:1em .5em;
+    max-width:30em;
+    margin: 0 auto;
     font-size: .9rem;
 }
 
@@ -75,6 +77,10 @@ img{
     cursor:pointer;
     width:60%;
 }
+.mobile__search-icon{
+    padding:0 .5em;
+}
+
 @media (min-width:900px){
     .desktop{
         display:block;

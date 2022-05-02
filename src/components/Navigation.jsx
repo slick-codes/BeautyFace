@@ -14,13 +14,10 @@ import {
 
 // CSS Importation
 import "../styles/css/Navigation.css";
-
 import React from "react";
-
 
 const Navigation = function(){
 
-    
     const [state, setState] = React.useState({
         navToggle: false
     })
@@ -62,11 +59,11 @@ const Navigation = function(){
                     </div>
                 </section>
                     <section className="search">
-                        <div className="search__container desktop">
+                        <div className="search__container">
                             <input type="text" placeholder="Search Product" />
                             <button className="search__button"> <FontAwesomeIcon icon={ faSearch }/> </button>
                         </div>
-                        <div className="mobile">
+                        <div className="mobile__search-icon">
                             <FontAwesomeIcon icon={faSearch} />
                         </div>
                         <div className="cart">
@@ -78,7 +75,6 @@ const Navigation = function(){
         </nav>
       </>
     );
-
 }
 
 export default Navigation;

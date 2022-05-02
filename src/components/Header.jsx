@@ -12,8 +12,8 @@ class Header extends Component {
         <div className="header__container">
           <div className="header__inner-container">
             <section className="header__image">
-              <img src={shopingBag} alt="" class="mobile" />
-              <img src={showcase} alt="" class="desktop" />
+              <img src={shopingBag} alt="" className="mobile" />
+              <img src={showcase} alt="" className="desktop" />
             </section>
             <section className="header__text">
               <div>

@@ -2,13 +2,33 @@ nav {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-flow:column;
     position: relative;
     z-index: 20;
-    padding:1.5em 0;
+    padding:0.1em 1em;
     box-shadow: 0px 0px 9px #00000014;
     /* display:none; */
 }
-
+.search__section{
+    display:flex;
+    align-items:center;
+    justify-content: space-between;
+    width:100%;
+    padding:.5em .9em;
+    padding-top:1em;
+    border-bottom: solid 1px #d9d9d966;
+}
+.search__section .search{
+    display:flex;
+    align-items:center;
+    width:100%;
+    padding-left: .5em;
+}
+.logo__section{
+    text-align:center;
+    width:100%;
+    /* padding:1em 0; */
+}
 .nav__container {
     display: flex;
     width: 100%;
@@ -17,9 +37,17 @@ nav {
     align-items: center;
     /* justify-content:space-between; */
 }
+nav{
+    position:sticky;
+    top:0;
+}
+
+.nav__container > section:not(:first-child){
+    margin-left:auto;
+}
 
 .nav__container>section {
-    margin: 0 auto;
+    /* width:100%; */
 }
 
 nav .logo{
@@ -44,7 +72,7 @@ nav .navlink a {
     font-weight: bolder;
 }
 
-.navlink {
+nav .nav__container section.navlink {
     display: flex;
     flex-flow: column;
     justify-content: center;
@@ -53,8 +81,17 @@ nav .navlink a {
     left: 0;
     top: 0;
     background: white;
+    transform: translateX(-23em);
+    transition:transform .3s linear;
     /* background:blue; */
 }
+nav.active .nav__container  section.navlink{
+    transform: translateX(0);
+}
+body{
+    padding-bottom:14em;
+}
+
 
 .navlink label {
     padding: 2em 0;
@@ -63,8 +100,9 @@ nav .navlink a {
     flex-flow: column;
     display: flex;
     cursor: pointer;
-    display:none;
 }
+
+
 
 .navlink label:hover>a {
     color: var(--cta-color);
@@ -86,30 +124,45 @@ nav .navlink a {
     font-size:.8rem;
 }
 
-nav section.cart__config {
-    display: flex;
+nav section.cart__config > div.desktop {
+    display: none;
     align-items: center;
     justify-content: flex-end;
 }
-
+.cart__config .logo{
+    transform:translateX(1.5em);
+}
 .search {
     display: flex;
     position: relative;
+    width: 13em;
     align-items: center;
 }
 
+.navicon{
+    display:flex;
+}
+.navicon svg:not(.navicon:last-child){
+    padding:1em;
+}
+
 .search input {
-    padding: .5em 1em;
+    padding: 1em 1em;
     outline: none;
     border-radius: .3em;
     transition: .3s;
-    width: 13em;
     transform-origin: right;
     transition-property: padding;
     will-change: padding;
-    border:solid 1px rgb(130, 130, 130);
+    border:solid 1px rgb(0 0 0);
     font-size:.8rem;
-    background-color:rgb(245, 245, 245);
+    width:100%;
+    /* background-color:rgb(245, 245, 245); */
+}
+@media (max-width:360px){
+    .search {
+        width:50%;
+    }
 }
 
 .search input:focus {
@@ -160,7 +213,9 @@ nav section.cart__config {
         padding:0;
         /* display:none; */
     }
-
+    .search__section{
+        display:none;
+    }
     .nav__container {
         display: flex;
         width: 100%;
@@ -259,6 +314,10 @@ nav section.cart__config {
     .cart svg {
         padding-left: 1em;
     }
+
+nav section.cart__config > div.desktop {
+    display:flex;
+}
 
     nav section.cart__config {
         display: flex;

@@ -15,3 +15,17 @@
 #activeLink a{
   color:var(--cta-color);
 }
+
+.desktop{
+  display: none;
+}
+
+@media (min-width: 800px){
+
+  .mobile{
+    display:none;
+  }
+  .desktop{
+    display: initial;
+  }
+}

@@ -40,8 +40,11 @@ const Navigation = function(){
                 <section className="logo">
                     <h1 className="desktop">Beauty<span>Face</span></h1>
                     {/* <h1 class="mobile">B<span>F</span></h1> */}
-                    <div className="mobile" onClick={toggleNav}>
+                    <div className="mobile catigories" onClick={toggleNav}>
+                        <div>
                         <FontAwesomeIcon icon={ faNavicon } />
+                        </div>
+                        <p>CATIGORIES</p>
                     </div>
                 </section>
 
@@ -49,14 +52,22 @@ const Navigation = function(){
                 <section className="navlink">
                     <div className="navlink__container">
                         <label> <a href="#">HOME</a> </label>
-                        <label> <a href="#">CARTIGORIES</a> </label>
+                        <label className="dropdown">
+                            <label> <a href="#">CARTIGORIES <FontAwesomeIcon icon={ faAngleDown } /> </a> </label>
+                            <section className="dropdown__content">
+                                <div className="dropdown__container"></div>
+                            </section>
+                        </label>
                         <label> <a href="#">CONTACT</a> </label>
                     </div>
                 </section>
                     <section className="search">
-                        <div className="search__container">
+                        <div className="search__container desktop">
                             <input type="text" placeholder="Search Product" />
                             <button className="search__button"> <FontAwesomeIcon icon={ faSearch }/> </button>
+                        </div>
+                        <div className="mobile">
+                            <FontAwesomeIcon icon={faSearch} />
                         </div>
                         <div className="cart">
                             <FontAwesomeIcon icon={faCartArrowDown} />

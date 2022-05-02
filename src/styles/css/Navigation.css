@@ -1,5 +1,5 @@
 nav {
-    padding: 1em 0;
+    /* padding: 1em 0; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -79,7 +79,7 @@ nav.active .navlink {
 
 .navlink a {
     display: block;
-    padding: 1em;
+    padding: 2.3em 1em;
     font-family: century gothic;
     font-weight: bold;
     font-size: .9rem;
@@ -87,11 +87,17 @@ nav.active .navlink {
     text-decoration: none;
 }
 
+.dropdown__content {
+    display: none;
+}
+
 .search {
     margin-left: auto;
     display: flex;
     align-items: center;
     width: 100%;
+    padding-left:auto;
+    justify-content: flex-end;
 }
 
 .search .cart {
@@ -102,7 +108,7 @@ nav.active .navlink {
 .search__container {
     position: relative;
     align-items: center;
-    display: flex;
+    display: none;
     width: 100%;
     padding-left: 1em;
 }
@@ -113,7 +119,7 @@ nav.active .navlink {
     padding: .25em 1em;
     border-radius: 0;
     border: none;
-    background-color: var(--cta-color);
+    background-color: black;
     color: white;
     cursor: pointer;
 }
@@ -132,7 +138,26 @@ nav.active .navlink {
     outline: none;
     background-color: #fcffee;
 }
+.catigories {
+    display: flex;
+    align-items: center;
+    flex-flow:row;
+    /* background-color:var(--cta-color); */
+    color:white;
+    padding:.3em .5em;
+    /* border:solid 1px black; */
+}
+.catigories > div{
+    background:black;
+    padding:0px .5em;
+}
 
+.catigories p{
+    padding-left:.5em;
+    font-size:.6rem;
+    font-weight:bolder;
+    color:black;
+}
 
 @media (min-width: 900px) {
 
@@ -143,10 +168,11 @@ nav.active .navlink {
         background: transparent;
         transform: translateX(0);
         /* margin: 0 auto; */
-        width:initial;
+        width: initial;
         /* background:blue; */
-        justify-content:center;
-        display:flex;
+        justify-content: center;
+        display: flex;
+        transition:0s;
     }
 
     .navlink__container {
@@ -157,8 +183,39 @@ nav.active .navlink {
         width: initial;
     }
 
-    .search__container {
+    .dropdown {
+        position: relative;
+    }
+
+    .dropdown:hover .dropdown__content {
+        opacity: 1;
+        pointer-events: all;
+    }
+
+    .dropdown__content {
+        opacity: 0;
+        pointer-events: none;
+        position: absolute;
+        /* background:blue; */
+        top: 5.2em;
+        padding: .5em;
+        display: block;
+    }
+
+ 
+
+    .dropdown__container {
+        width: 30em;
+        height: 20em;
+        background-color: white;
+        /* border-radius:.3em; */
+    }
+
+    .search .search__container {
         width: initial;
         padding: 0;
+        display:flex;
+        justify-content: center;
+        align-items:center;
     }
 }

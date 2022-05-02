@@ -4,6 +4,7 @@ import React from 'react';
 // Components
 import Navigation from './components/Navigation';
 import Header from './components/Header';
+import Products from './components/Products'
 
 class App extends React.Component{
 
@@ -18,6 +19,9 @@ class App extends React.Component{
       <>
         <Navigation />
         <Header />
+        <main>
+          <Products />
+        </main>
       </>
     );
   }

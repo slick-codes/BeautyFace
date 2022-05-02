@@ -5,12 +5,10 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faSearch,
-  faCartPlus,
-  faAngleDown,
   faNavicon,
-  faCartFlatbed,
   faCartArrowDown,
 } from "@fortawesome/free-solid-svg-icons";
+import Nav from './Nav';
 
 // CSS Importation
 import "../styles/css/Navigation.css";
@@ -47,16 +45,7 @@ const Navigation = function(){
 
                 <section className="navsection">
                 <section className="navlink">
-                    <div className="navlink__container">
-                        <label> <a href="#">HOME</a> </label>
-                        <label className="dropdown">
-                            <label> <a href="#">CARTIGORIES <FontAwesomeIcon icon={ faAngleDown } /> </a> </label>
-                            <section className="dropdown__content">
-                                <div className="dropdown__container"></div>
-                            </section>
-                        </label>
-                        <label> <a href="#">CONTACT</a> </label>
-                    </div>
+                   <Nav />
                 </section>
                     <section className="search">
                         <div className="search__container">

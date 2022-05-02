@@ -20,6 +20,10 @@
   display: none;
 }
 
+body{
+  background-color:#f5f5f536;
+}
+
 @media (min-width: 900px){
 
   .mobile{

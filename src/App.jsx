@@ -1,10 +1,13 @@
-import './App.css';
 import React from 'react';
+
 
 // Components
 import Navigation from './components/Navigation';
 import Header from './components/Header';
 import Products from './components/Products'
+
+import './App.css';
+import './styles/css/main.css';
 
 class App extends React.Component{
 

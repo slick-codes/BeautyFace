@@ -115,6 +115,14 @@ img{
         position: initial;
     }
 
+    .header__image{
+        display: flex;
+    }
+    .header__image img{
+        width:30vw;
+        max-width:30em;
+    }
+
     .header__text > div{
         margin:auto;
     }

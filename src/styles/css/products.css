@@ -1,3 +1,6 @@
+.right__button,.left__button{
+    display:none;
+}
 
 .recommended > div{
     display:flex;
@@ -5,22 +8,35 @@
     align-items:center;
     padding:0em 0em;
     padding-right:1em;
+    border-radius:.2em;
     padding-bottom:2em;
 }
-
-
+.products{
+    padding:0px 1em;
+}
+.recommended{
+    /* background:#0f0f0f03; */
+    /* border:solid 1px #0f0f0f03; */
+    padding:.5em;
+}
+div::-webkit-scrollbar{
+    display:none;
+}
 
 .product{
     padding:1em .5em;
     margin-left:1em;
     background:white;
-    box-shadow:0px 8px 13px 1px #00000008;
-    border:solid 1px rgba(8, 8, 8, 0.122);
+    box-shadow:0px 8px 20px 1px #0000000d;
+    /* border:solid 1px rgba(8, 8, 8, 0.122); */
+    border-radius:.2em;
 
     margin-top:1em;
 }
 .product__image{
     padding:.2em .5em;
+    min-width:11em;
+    max-width:15em;
 }
 .product__image img{
     width:100%;
@@ -28,10 +44,11 @@
 .product__name{
     font-weight:normal;
     font-size: .9rem;
-    line-height: 1.5em;
+    line-height: 1.4em;
+    font-weight:bold;
     position:relative;
     line-break:loose;
-    width:10em;
+    /* width:10em; */
 }
 
 .product__currency{
@@ -41,4 +58,56 @@
     padding-left:.2em;
     font-size: .9rem;
     font-weight: normal;
+}
+.product__price{
+    display:flex;
+    flex-flow:row;
+    align-items:center;
+}
+.product__button{
+    border:none;
+    background: #af2323;
+    color:white;
+    padding:.4em 1em;
+    font-size:.7rem;
+    border-radius:.3em;
+}
+
+@media (min-width: 900px){
+    .recommended_product__container{
+        position:relative;
+        display:flex;
+        flex-flow:column;
+        justify-content: center;
+    }
+    .button__container{
+        /* position:absolute; */
+        height:100%;
+        display:flex;
+        align-items:center;
+        /* width:1%; */
+        justify-content: space-between;
+    }
+    .left__button{
+        right:0;
+    }
+    .right__button,.left__button{
+        height:3em;
+        width:3em;
+        background-color:black;
+        color:white;
+        display:flex;
+        justify-content: center;
+        border-radius:40em;
+        align-items: center;
+        position:absolute;
+        cursor:pointer;
+    }
+    .right__button{
+        margin-left:-1em;
+    }
+    .left__button{
+        margin-right: -1em;
+    }
+    
 }

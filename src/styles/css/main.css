@@ -17,7 +17,10 @@ main{
     font-family:century gothic;
     border-bottom:solid .4px rgba(0, 0, 0, 0.211);
     padding:0 1em;
+    padding-left:.6em;
+    padding-top:.5em;
     padding-bottom:.5em;
-    font-size:1.5rem;
-    letter-spacing: -.05em;
+    font-size:1.2rem;
+    /* letter-spacing: -.05em; */
+    /* font-weight:normal; */
 }

@@ -13,6 +13,12 @@
     position:relative;
 }
 
+
+.left__button, 
+.right__button{
+    display:none;
+}
+
 .recommended__product-container::-webkit-scrollbar{
     display:none;
 }

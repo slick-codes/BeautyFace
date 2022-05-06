@@ -12,7 +12,10 @@
     justify-content: center;
     position:relative;
 }
-
+.name{
+    background:blue;
+    padding:4em;
+}
 
 .left__button, 
 .right__button{

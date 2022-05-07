@@ -14,6 +14,8 @@
     "react-router-dom": "^6.3.0",
     "react-scripts": "5.0.1",
     "react-simply-carousel": "^5.1.5",
+    "react-touch-carousel": "^0.10.2",
+    "swiper": "^8.1.4",
     "web-vitals": "^2.1.4"
   },
   "scripts": {

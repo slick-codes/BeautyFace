@@ -18,6 +18,9 @@
     padding:2em 0;
     scroll-behavior: smooth;
 }
+.swiper-wrapper{
+    transition:.3s;
+}
 
 .product__image{
     background:rgba(0, 0, 0, 0.104);

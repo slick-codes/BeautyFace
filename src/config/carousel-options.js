@@ -4,7 +4,7 @@
 const  responsive = {
     superLargeDesktop: {
         breakpoint: { max: 4000, min: 950},
-        partialVisibilityGutter: 40,
+        // partialVisibilityGutter: 40,
         items: 5
     },
     desktop:{

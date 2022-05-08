@@ -13,6 +13,14 @@
     background:white;
     transition:transform .3s;
     border-radius:.3em;
+    user-select: none;
+}
+.product img{
+    user-drag: none;
+    -webkit-user-drag: none;
+    khtml-user-drag: none;
+    -moz-user-drag:none;
+    -o-user-drag: none;
 }
 .swiper{
     padding:2em 0;

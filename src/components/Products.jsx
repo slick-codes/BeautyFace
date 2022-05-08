@@ -28,10 +28,11 @@ const Products = function () {
   function updateSlidePerView() {
     setSlidePerView((oldValue) => {
       const windowWidth = window.innerWidth;
+      const round = numb => Math.round( numb / 2)
 
-      if (windowWidth >= 950) return 5;
-      else if (windowWidth >= 830) return 4;
-      else if (windowWidth >= 630) return 3;
+      if (windowWidth >= 950) return round(5);
+      else if (windowWidth >= 830) return round(4);
+      else if (windowWidth >= 630) return round(5);
       else return 2;
     });
   }
@@ -60,14 +61,16 @@ const Products = function () {
           </button>
         </div> */}
         <section className="recommended">
-          <h1 className="title">Recommended</h1>
+          <h1 className="title">Recommended <div></div> </h1>
           <div className="recommended__product-container">
             <Carousel
 	    responsive={responsive}
 	    autoPlay={ false }
-	    infinite={ false }
-	//     autoPlaySpeed={ 3000}
-	    transitionDuration={ 0 }
+	    infinite={ false } 
+	    slidesToSlide= { slidePerView }
+	    shouldResetAutoplay= { false }
+	//     minimumTouchDrag={ 220}
+	    transitionDuration={ 100 }
 	    customTransition="all .3s"
             >
               {recommendedProducts}

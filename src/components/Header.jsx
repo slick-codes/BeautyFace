@@ -1,7 +1,7 @@
 import { Component } from "react";
 
 // CSS | Image
-import "./../styles/css/Header.css";
+import "./../styles/css/header.css";
 import showcase from "./../images/showcase_4.png";
 import shopingBag from "./../images/shoping_bag.png";
 

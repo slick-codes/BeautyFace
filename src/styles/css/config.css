@@ -1,0 +1,35 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: poppins;
+}
+body{
+  /* background:#f9f9f9; */
+}
+
+:root{
+  --cta-color: #8000ff;
+  --contrast-color: yellow;
+  --redish: rgb(188, 8, 8);
+  --radius: .3em;
+  --grayish: whitesmoke;
+}
+
+#activeLink a{
+  color:var(--cta-color);
+}
+
+.desktop{
+  display: none;
+}
+
+@media (min-width: 900px){
+
+  .mobile{
+    display:none;
+  }
+  .desktop{
+    display: initial;
+  }
+}

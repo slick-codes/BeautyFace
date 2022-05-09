@@ -11,7 +11,7 @@ import {
 import Nav from './Nav';
 
 // CSS Importation
-import "../styles/css/Navigation.css";
+import "../styles/css/navigation.css";
 import React from "react";
 
 const Navigation = function(){

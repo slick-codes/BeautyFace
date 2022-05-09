@@ -13,6 +13,7 @@ body{
   --contrast-color: yellow;
   --redish: rgb(188, 8, 8);
   --radius: .3em;
+  --grayish: whitesmoke;
 }
 
 #activeLink a{

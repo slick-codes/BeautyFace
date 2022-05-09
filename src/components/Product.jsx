@@ -16,7 +16,7 @@ const Product = function( props ){
         const image = event.target 
         if( image.clientHeight > image.clientWidth)
             image.style.height = '100%'
-        else 
+        else
             image.style.width = '100%'
     }
 

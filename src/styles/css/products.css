@@ -1,19 +1,45 @@
-.recommended__product-container {
-    padding: 1em;
+.recommended {
+    /* background-color: var(--cta-color) */
 }
 
 .recommended__product-container {
+    padding: 1em;
+    padding-top:0;
+    background-color:var(--grayish);
     cursor: grab;
 }
 
+.group__nav{
+    display:flex;
+    padding:1em 1em;
+    justify-content:space-between;
+    align-items:center;
+    background:#ea639e;
+}
+.group__nav .title{
+    font-size:1.3rem;
+    font-weight: bolder;
+    text-transform:capitalize;
+    font-family: poppins;
+}
+.group__nav button{
+    font-size:1rem;
+    border:none;
+    background:transparent;
+    text-decoration:underline;
+    padding:0 1em;
+    font-weight:bolder;
+}
+
 .recommended__product-container .product {
-    border: solid 4px #f9f9f9;
+    border: solid 4px var(--grayish);
     border-radius: .6em;
     min-width: initial ;
 }
 
 .react-multi-carousel-track {
-    padding: 2em 0;
+    padding: 1em 0;
+    /* padding-top:0em; */
 }
 
 
@@ -79,13 +105,14 @@
 
 .product__name {
     position:absolute;
-    /* word-break:none; */
-    white-space:no-space;
+    word-break:break-all;
+    /* white-space:; */
     height:1.4em;
     /* background:blue; */
     overflow:hidden;
     font-size: .9rem;
     font-weight: normal;
+    /* background:blue; */
     /* background:blue; */
     position:relative;
     font-family: century gothic;
@@ -97,7 +124,7 @@
 
 .product__price {
     padding: .5em 0;
-    padding-bottom:1em;
+    /* padding-bottom:1em; */
     padding-left: .3em;
     font-weight: normal;
     font-size: .8rem;
@@ -109,8 +136,9 @@
     padding: .5em 0;
     cursor: pointer;
     font-weight:bolder;
-    font-size: .7rem;
+    font-size: .5rem;
     border:solid 1px var(--cta-color);
+    display:none;
 }
 .product__button.favorite{
     /* font-size:.8rem; */
@@ -119,6 +147,7 @@
     display:flex;
     justify-content: center;
     align-items:center;
+    display:none;
 }
 
 .product__button.favorite div{
@@ -208,6 +237,6 @@
         z-index: 1;
         position: relative;
         background-color: rgb(255, 255, 255);
-        border-color: transparent;
+        /* border-color: transparent; */
     }
 }

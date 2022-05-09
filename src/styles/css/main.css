@@ -18,39 +18,3 @@ main{
     max-width:70em;
     width:100%;
 }
-
-.products .title{
-    font-family:century gothic;
-    padding:0 .8em;
-    font-size:1.5rem;
-    letter-spacing: -.02em;
-    text-transform:uppercase;
-    font-weight:bolder;
-    display:flex;
-    align-items: center;
-    justify-content: space-between;
-    width:100%;
-}
-
-.products .title > div{
-    position:relative;
-    display:block;
-    width:100%;
-    border-top:solid 1px black;
-    opacity:.1;
-}
-.products .title span{
-    display:block;
-    padding-right:1em;
-}
-
-.products__container .title.left span{
-    padding:0;
-    padding-left: 1em;
-}
-
-@media (min-width: 830px){
-    .products .title{
-        font-size: 2rem;
-    }
-}

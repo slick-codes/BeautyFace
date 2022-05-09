@@ -46,9 +46,10 @@ const Products = function (props) {
         <div className="products">
           <div className="products__recommended">
             <section className="recommended">
-              <h1 className="title">
-                <span>Recommended</span> <div></div>
-              </h1>
+                <div className="group__nav">
+                  <section className="title">Recommended</section>
+                  <section className="call-to-action"> <button>See All</button></section>
+                </div>
               <div className="recommended__product-container">
                 <Carousel
                   responsive={responsive}

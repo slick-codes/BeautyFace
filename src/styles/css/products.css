@@ -1,140 +1,202 @@
-
-.recommended__product-container{
-    padding:1em;
-}
-
-.recommended__product-container{
-    cursor:grab;
-}
-
-.product{
+.recommended__product-container {
     padding: 1em;
-    display:flex;
-    flex-flow:column;
-    background:white;
-    transition:transform .3s;
-    border-radius:.3em;
-    user-select: none;
-    max-height: 18em;
 }
-.product img{
+
+.recommended__product-container {
+    cursor: grab;
+}
+
+.recommended__product-container .product {
+    border: solid 4px #f9f9f9;
+    border-radius: .6em;
+    min-width: initial ;
+}
+
+.react-multi-carousel-track {
+    padding: 2em 0;
+}
+
+
+.product {
+    padding: 1em;
+    display: flex;
+    flex-flow: column;
+    background: rgba(255, 255, 255, 0.863);
+    transition: .6s;
+    border-radius: .3em;
+    user-select: none;
+    /* min-width:15.4vw; */
+    /* max-height: 18em; */
+}
+
+.product img {
     user-drag: none;
     -webkit-user-drag: none;
     khtml-user-drag: none;
-    -moz-user-drag:none;
+    -moz-user-drag: none;
     -o-user-drag: none;
-}
-.swiper{
-    padding:2em 0;
-    scroll-behavior: smooth;
-}
-.swiper-wrapper{
-    transition:.3s;
-}
-
-.product__image{
-    background:#f6f6f6;
+    width: auto;
     border-radius:.3em;
-    height:9em;
-    display:flex;
-    overflow:hidden;
-    align-items:center;
-}
-.product__image img{
-    width:100%;
 }
 
-.product__details{
-    width:100%;
-    padding:.5em .3em;
+.product__image {
+    background: #f6f6f6;
+    border-radius: .3em;
+    height: 11em;
+    display: flex;
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+    background-blend-mode: soft-light;
+    animation-duration:1s;
+    animation-timing-function:ease-in;
+    animation-iteration-count: infinite;
+}
+.product__image.--loading{
+    background-blend-mode:normal;
+    animation-name: image__loader;
+}
+
+@keyframes image__loader{
+    from {
+        background-color: rgba(174, 174, 174, 0.151);
+    }to{
+        background-color: #f6f6f6;
+    }
+}
+
+.product__details {
+    width: 100%;
+    padding: .5em .3em;
     padding-bottom: 0;
 }
 
-.product__name{
-    word-break:break-all;
-    font-size:.9rem;
-    font-weight: bold;
-    font-family:century gothic;
-    padding-left:.3em;
+.product__name {
+    /* word-break:none; */
+    white-space: nowrap;
+    overflow:hidden;
+    font-size: .9rem;
+    font-weight: normal;
+    font-family: century gothic;
+    padding-left: .3em;
+    /* background:blue; */
     /* height:2.6em; */
+    /* margin-top:1em; */
 }
 
-.product__price{
-    padding:1em 0;
-    padding-left:.3em;
-    font-weight:normal;
-    font-size:.8rem;
+.product__price {
+    padding: .5em 0;
+    padding-bottom:1em;
+    padding-left: .3em;
+    font-weight: normal;
+    font-size: .8rem;
 }
 
-.product__button{
-    width:100%;
-    border:none;
-    padding:.5em 0;
-    cursor:pointer;
+.product__button {
+    width: 100%;
+    border: none;
+    padding: .5em 0;
+    cursor: pointer;
+    font-weight:bolder;
+    font-size: .7rem;
+    border:solid 1px var(--cta-color);
+}
+.product__button.favorite{
+    /* font-size:.8rem; */
+    background:var(--cta-color);
+    color:white;
+    display:flex;
+    justify-content: center;
+    align-items:center;
 }
 
-.products__inner-container{
-    display:grid;
-    gap:.5em;
+.product__button.favorite div{
+    padding:0 .4em;
+}
+.products__inner-container {
+    display: grid;
+    gap: .5em;
     grid-template-columns: repeat(2, 1fr);
-    padding:1em;
+    padding: 1em;
+    /* background-color:blue; */
 }
 
-.button__container{
-    display:none;
+
+.button__container {
+    display: none;
+}
+.react-multiple-carousel__arrow{
+    background:black;
+    opacity:0;
 }
 
-@media (min-width: 630px){
-    .products__inner-container{
+@media (min-width: 630px) {
+    .products__inner-container {
         grid-template-columns: repeat(3, 1fr);
     }
 }
 
-@media (min-width: 830px){
-    .products__inner-container{
+@media (min-width: 830px) {
+
+    .react-multiple-carousel__arrow.react-multiple-carousel__arrow--right {
+        right: calc(4% + -31px) !important;
+    }
+
+    .react-multiple-carousel__arrow.react-multiple-carousel__arrow--left {
+        left: calc(4% + -31px) !important;
+    }
+
+    .products__inner-container {
         grid-template-columns: repeat(4, 1fr);
     }
-    .products__recommended{
-        display:flex;
-        flex-flow:column;
-        position:relative;
+
+    .products__recommended {
+        display: flex;
+        flex-flow: column;
+        position: relative;
         justify-content: center;
 
     }
-    .button__container{
-        width:100%;
-        display:flex;
+
+    .button__container {
+        width: 100%;
+        display: flex;
         justify-content: space-between;
-        position:absolute;
-        background:blue;
+        position: absolute;
+        background: blue;
         z-index: 2;
         /* height:1em; */
     }
-    .button__container > button{
-        position:absolute;
-        background:black;
-        color:White;
-        height:3em;
-        width:3em;
-        border-radius:.3em;
+
+    .button__container>button {
+        position: absolute;
+        background: black;
+        color: White;
+        height: 3em;
+        width: 3em;
+        border-radius: .3em;
     }
-    .button__container .left__button{
-        right:0;
+
+    .button__container .left__button {
+        right: 0;
     }
-    .button__container .right__button{
-        left:-1em;
+
+    .button__container .right__button {
+        left: -1em;
     }
 }
 
-@media (min-width: 950px){
-    .products__inner-container{
+@media (min-width: 950px) {
+    .products__inner-container {
         grid-template-columns: repeat(5, 1fr);
     }
 
-    .product:hover{
-        transform:scale(1.03);
-        box-shadow:0px 0px 2em 20px rgb(0 0 0 / 3%);
+    .product:hover {
+        /* transform:scale(1.01); */
+        box-shadow: 0px 0px 2em 20px rgb(0 0 0 / 3%);
         z-index: 1;
-        position:relative;
+        position: relative;
+        background-color: rgb(255, 255, 255);
+        border-color: transparent;
     }
 }

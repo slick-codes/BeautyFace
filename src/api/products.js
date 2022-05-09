@@ -1,113 +1,171 @@
-const products =  [
-    {
-        name: "Pink-Designer-Bags",
-        thumbNail: "Pink-Designer-Bags-3-1.jpg",
-        details: "some serious data information",
-        price: "20,000",
-        currency: "NGN",
-        isFavorite: false,
+const products = [
+  {
+    name: "Pink-Designer-Bags",
+    thumbNail: "Pink-Designer-Bags-3-1.jpg",
+    details: "some serious data information",
+    price: "30,050",
+    currency: "NGN",
+    isFavorite: false,
+  },
+  {
+    name: "Pink-Designer-Bags",
+    thumbNail: "Investing-in-designer-bags-1024x930.png",
+    details: "some serious data information",
+    price: "20,000",
+    currency: "NGN",
+    isFavorite: false,
+  },
+  {
+    name: "Pink-Designer-Bags",
+    thumbNail: "cdbea8e704222909c68b1dc2aa5ec76a.png",
+    details: "some serious data information",
+    price: "18,600",
+    currency: "NGN",
+    isFavorite: false,
+  },
+  {
+    name: "Pink-Designer-Bags",
+    thumbNail: "Women-Shoes-Free-Download-PNG.png",
+    details: "some serious data information",
+    price: "16,000",
+    currency: "NGN",
+    isFavorite: false,
+  },
+  {
+    name: "Blue women hand bag fabriclandiesblue",
+    thumbNail:
+      "purepng.com-blue-women-baghandbagwomen-bagsoft-fabricladiesblue-1421526415269ea8r0.png",
+    details: "some serious data information",
+    price: "50,070",
+    currency: "NGN",
+    isFavorite: false,
+  },
+  {
+    name: "Tote bag - women bag",
+    thumbNail:
+      "png-clipart-handbag-backpack-woman-tote-bag-women-bag-white-luggage-bags.png",
+    details: "some serious data information",
+    price: "15,300",
+    currency: "NGN",
+    isFavorite: false,
+  },
+  {
+    name: "Pink-Designer-Bags",
+    thumbNail: "479-4794436_the-best-womens-golf-shoes-gfore-womens-golf.png",
+    details: "some serious data information",
+    price: "22,100",
+    currency: "NGN",
+    isFavorite: false,
+  },
+  {
+    name: "Red Textured Women Bag ",
+    thumbNail:
+      "5n1fgv-red-textured-women-bag-png.png",
+    details: "some serious data information",
+    price: "17,720",
+    currency: "NGN",
+    isFavorite: false,
+  },
+  {
+    name: "Pink - Women Shoe",
+    thumbNail: "pink-women-shoes-png-image-icons-and-png-backgrounds-1.png",
+    details: "some serious data information",
+    price: "2,250",
+    currency: "NGN",
+    isFavorite: false,
+  },
+  {
+    name: "Women Replica Bags 5A quality Ladies Holesale",
+    thumbNail:
+      "Designer-Bag-for-Women-Replica-Bags-5A-Quality-Ladies-Wholesale-Replica-Bag.jpg",
+    details: "some serious data information",
+    price: "3,500",
+    currency: "NGN",
+    isFavorite: false,
+  },
+  {
+    name: "Blue Designers Heels",
+    thumbNail: "women_shoes_PNG7467.png",
+    details: "some serious data information",
+    price: "40,000",
+    currency: "NGN",
+    isFavorite: false,
+  },
+  {
+    name: "Fancy Brown Designer Bag Collection",
+    thumbNail: "Investing-in-designer-bags-1024x930.png",
+    details: "some serious data information",
+    price: "100,000",
+    currency: "NGN",
+    isFavorite: false,
+  },
+  {
+    name: "Red handbag and shoe for women",
+    thumbNail:
+      "Red-handbag-and-shoes-for-woman-on-transparent-background-PNG.png",
+    details: "some serious data information",
+    price: "28,000",
+    currency: "NGN",
+    isFavorite: false,
+  },
+  {
+    name: "Brown Flowery Fancy Sniker",
+    thumbNail: "brown_flowery_fancy_sniker.jpg",
+    details: "some serious data information",
+    price: "15,000",
+    currency: "NGN",
+    isFavorite: false,
+  },
+  {
+    name: "Pink Casual women Sniker",
+    thumbNail: "pink_casual_women_sniker.jpg",
+    details: "some serious data information",
+    price: "6,000",
+    currency: "NGN",
+    isFavorite: false,
+  },
+  {
+    name: "Spotted Orange Style",
+    thumbNail: "spotted_orange_style.jpg",
+    details: "some serious data information",
+    price: "2,000",
+    currency: "NGN",
+    isFavorite: false,
+  },
+  {
+    name: "Leather Casual Lady Sneaker",
+    thumbNail: "leather_casual_lady_sneaker.jpg",
+    details: "some serious data information",
+    price: "13,000",
+    currency: "NGN",
+    isFavorite: true,
+  },
+  {
+    name: "Leather Casual Lady Sneaker",
+    thumbNail: "complete-body-collection_silo_NEW.png",
+    details: "some serious data information",
+    price: "1,500",
+    currency: "NGN",
+    isFavorite: false,
+  },
+  {
+    name: "Leaf Spotted Cown ",
+    thumbNail: "leave_spotted_cown.jpg",
+    details: "some serious data information",
+    price: "1,500",
+    currency: "NGN",
+    isFavorite: false,
+  },
+  {
+    name: "Package Accesories and Cown",
+    thumbNail: "package_accesories_and_cown.jpg",
+    details: "some serious data information",
+    price: "1,500",
+    currency: "NGN",
+    isFavorite: false,
+  },
+];
 
-    },
-    {
-        name: "Pink-Designer-Bags",
-        thumbNail: "Investing-in-designer-bags-1024x930.png",
-        details: "some serious data information",
-        price: "20,000",
-        currency: "NGN",
-        isFavorite: false,
+console.log(products.length);
 
-    },
-    {
-        name: "Pink-Designer-Bags",
-        thumbNail: "cdbea8e704222909c68b1dc2aa5ec76a.png",
-        details: "some serious data information",
-        price: "20,000",
-        currency: "NGN",
-        isFavorite: false,
-
-    },
-    {
-        name: "Pink-Designer-Bags",
-        thumbNail: "Women-Shoes-Free-Download-PNG.png",
-        details: "some serious data information",
-        price: "20,000",
-        currency: "NGN",
-        isFavorite: false,
-
-    },
-    {
-        name: "Blue women hand bag fabriclandiesblue",
-        thumbNail: "purepng.com-blue-women-baghandbagwomen-bagsoft-fabricladiesblue-1421526415269ea8r0.png",
-        details: "some serious data information",
-        price: "20,000",
-        currency: "NGN",
-        isFavorite: false,
-
-    },
-    {
-        name: "Tote bag - women bag",
-        thumbNail: "png-clipart-handbag-backpack-woman-tote-bag-women-bag-white-luggage-bags.png",
-        details: "some serious data information",
-        price: "20,000",
-        currency: "NGN",
-        isFavorite: false,
-
-    },
-    {
-        name: "Pink-Designer-Bags",
-        thumbNail: "479-4794436_the-best-womens-golf-shoes-gfore-womens-golf.png",
-        details: "some serious data information",
-        price: "20,000",
-        currency: "NGN",
-        isFavorite: false,
-
-    },
-    {
-        name: "Tote bag - women bag ",
-        thumbNail: "png-clipart-handbag-backpack-woman-tote-bag-women-bag-white-luggage-bags.png",
-        details: "some serious data information",
-        price: "20,000",
-        currency: "NGN",
-        isFavorite: false,
-
-    },{
-        name: "Pink - Women Shoe",
-        thumbNail: "pink-women-shoes-png-image-icons-and-png-backgrounds-1.png",
-        details: "some serious data information",
-        price: "20,000",
-        currency: "NGN",
-        isFavorite: false,
-
-    },
-    {
-        name: "Women Replica Bags 5A quality Ladies Holesale",
-        thumbNail: "Designer-Bag-for-Women-Replica-Bags-5A-Quality-Ladies-Wholesale-Replica-Bag.jpg",
-        details: "some serious data information",
-        price: "20,000",
-        currency: "NGN",
-        isFavorite: false,
-
-    },
-    {
-        name: "Blue Designers Heels",
-        thumbNail: "women_shoes_PNG7467.png",
-        details: "some serious data information",
-        price: "20,000",
-        currency: "NGN",
-        isFavorite: false,
-
-    },
-    {
-        name: "Fancy Brown Designer Bag Collection",
-        thumbNail: "Investing-in-designer-bags-1024x930.png",
-        details: "some serious data information",
-        price: "20,000",
-        currency: "NGN",
-        isFavorite: false,
-
-    }
-] 
-
-console.log( products.length )
-
-export default products
+export default products;

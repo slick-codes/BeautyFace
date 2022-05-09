@@ -7,10 +7,10 @@ main{
     padding:4em 0;
 }
 .react-multiple-carousel__arrow {
-    opacity:.6;
+    opacity:.3;
     background-color:black;
 }
-.react-multiple-carousel__arrow:acitve{
+.react-multiple-carousel__arrow:hover{
     opacity:1;
 }
 
@@ -33,15 +33,20 @@ main{
 }
 
 .products .title > div{
-    /* content:"";
-    display:block;
-    justify-self: flex-end; */
     position:relative;
+    display:block;
     width:100%;
-    transform-origin: right;
-    transform: scaleX(.98);
-    background:blue;
-    border-top:solid 2px var(--cta-color);
+    border-top:solid 1px black;
+    opacity:.1;
+}
+.products .title span{
+    display:block;
+    padding-right:1em;
+}
+
+.products__container .title.left span{
+    padding:0;
+    padding-left: 1em;
 }
 
 @media (min-width: 830px){

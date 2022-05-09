@@ -1,18 +1,10 @@
-/* eslint-disable jsx-a11y/anchor-is-valid */
-/* eslint-disable no-unused-vars */
-/* eslint-disable react/jsx-no-comment-textnodes */
-
 // Importing Packages
 import React from "react";
-// import { Swiper, SwiperSlide, useSwiper } from "swiper/react";
-// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-// import { faArrowLeft, faArrowRight } from "@fortawesome/free-solid-svg-icons";
 
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 
-import ProductsContext from "./../api/data";
-
+import ProductsContext from "./../context/ProductsData";
 import responsive from "./../config/carousel-options";
 
 // Imported Custome Components
@@ -24,7 +16,6 @@ import "./../styles/css/products.css";
 const Products = function (props) {
   const recommendedProducts = [];
   const [slidePerView, setSlidePerView] = React.useState(2);
-  const spaceBetween = 8;
 
   function updateSlidePerView() {
     setSlidePerView((oldValue) => {
@@ -56,7 +47,7 @@ const Products = function (props) {
           <div className="products__recommended">
             <section className="recommended">
               <h1 className="title">
-                Recommended <div></div>
+                <span>Recommended</span> <div></div>
               </h1>
               <div className="recommended__product-container">
                 <Carousel
@@ -69,26 +60,36 @@ const Products = function (props) {
                   transitionDuration={100}
                   customTransition="all .3s"
                 >
-                  {
-					  	context.products.map( (product, index) =>( 
-							<Product 
-								key={index} 
-								name={ product.name } 
-								thumbNail={product.thumbNail} 
-								price={product.price}
-								currency= { product.currency}
-								isFavorite= {product.isFavorite}
-							/>
-							))
-				  }
+                  {context.products.map((product, index) => (
+                    <Product
+                      key={index}
+                      name={product.name}
+                      thumbNail={product.thumbNail}
+                      price={product.price}
+                      currency={product.currency}
+                      isFavorite={product.isFavorite}
+                    />
+                  ))}
                 </Carousel>
               </div>
             </section>
           </div>
           {/* Products Section */}
           <section className="products__container">
+            <h1 className="title left">
+			<div></div> <span>Products</span> 
+            </h1>
             <div className="products__inner-container">
-              {recommendedProducts}
+			{context.products.map((product, index) => (
+                    <Product
+                      key={index}
+                      name={product.name}
+                      thumbNail={product.thumbNail}
+                      price={product.price}
+                      currency={product.currency}
+                      isFavorite={product.isFavorite}
+                    />
+                  ))}
             </div>
           </section>
         </div>

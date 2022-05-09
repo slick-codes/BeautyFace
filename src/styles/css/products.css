@@ -66,17 +66,28 @@
 }
 
 .product__details {
-    width: 100%;
+    /* width: 100%; */
     padding: .5em .3em;
     padding-bottom: 0;
+     /* width:11.2vw; */
+     /* max-width:11em; */
+     display:flex;
+     flex-flow:column;
+    overflow: hidden;
+    /* background:blue; */
 }
 
 .product__name {
+    position:absolute;
     /* word-break:none; */
-    white-space: nowrap;
+    white-space:no-space;
+    height:1.4em;
+    /* background:blue; */
     overflow:hidden;
     font-size: .9rem;
     font-weight: normal;
+    /* background:blue; */
+    position:relative;
     font-family: century gothic;
     padding-left: .3em;
     /* background:blue; */

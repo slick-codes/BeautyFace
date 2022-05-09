@@ -128,9 +128,10 @@ nav.active .navlink {
 }
 
 .search__button {
-    position: Absolute;
+    position: absolute;
     right: .3em;
-    padding: .25em 1em;
+    /* margin-top:-.0em; */
+    padding: .35em 1em;
     border-radius: 0;
     border: none;
     background-color: black;

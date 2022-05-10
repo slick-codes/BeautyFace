@@ -1,5 +1,5 @@
 .recommended {
-    /* background-color: var(--cta-color) */
+    margin-top:2em;
 }
 
 .recommended__product-container {
@@ -14,7 +14,7 @@
     padding:1em 2em;
     justify-content:space-between;
     align-items:center;
-    background:#4a4444;
+    background:#c0c0c0;
 }
 .group__nav .title{
     font-size:1.3rem;
@@ -32,7 +32,7 @@
     border:none;
     background:transparent;
     text-decoration:underline;
-    font-weight:bolder;
+    /* font-weight:bolder; */
 }
 
 .recommended__product-container .product {
@@ -241,6 +241,6 @@
         z-index: 1;
         position: relative;
         background-color: rgb(255, 255, 255);
-        /* border-color: transparent; */
+        border-color: rgb(255, 255, 255);
     }
 }

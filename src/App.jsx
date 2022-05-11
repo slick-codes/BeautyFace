@@ -2,6 +2,7 @@ import React from "react";
 
 import ProductData from "./context/ProductsData";
 import products from "./api/products";
+import catigories from './api/catigories'
 
 // Components
 import Navigation from "./components/Navigation";
@@ -19,6 +20,7 @@ const App = function () {
     <ProductData.Provider
       value={{
         products,
+        catigories,
         methods: {},
       }}
     >

@@ -1,19 +1,15 @@
 // Packages
 import Carousel from 'react-multi-carousel';
+import  config  from './../config/catigories.config'
+
+
+import "./../styles/css/catigories.css";
+import 'react-multi-carousel/lib/styles.css';
 
 // CSS
-import "./../styles/css/catigories.css";
 import ProductContext from "./../context/ProductsData";
 
-import responsive from './../config/carousel-options'
-
 function Catigories() {
-
-    let slidePerView = 4;
-
-
-
-
   return (
     <ProductContext.Consumer>
       {(context) => (
@@ -21,34 +17,27 @@ function Catigories() {
           <div className="catigories__nav">
             <section className="title">Popular Catigories</section>
           </div>
-          <div className="catigories__content">
-            {window.innerWidth > 950 ? (
-              context.catigories.map((catigory, index) => (
-                <div className="catigory__card" key={index}>
-                  <div className="catigories__image"></div>
-                  <div className="catigory__text">{catigory.name}</div>
-                </div>
-              ))
-            ) : (
-              <Carousel
-                responsive={responsive}
-                autoPlay={false}
-                infinite={false}
-                slidesToSlide={slidePerView}
-                shouldResetAutoplay={false}
-                minimumTouchDrag={ 220}
-                transitionDuration={100}
-                customTransition="all .3s"
-              >
+          <div className="catigories__container">
+            <Carousel
+                responsive={ config.responsive }
+                slidesToSlide={ 3 }
+                shouldResetAutoplay={false} 
+            >
+
                 {
-                    context.catigories.map((catigory, index) => {
-                        console.log(catigory)
-                        return <div> {catigory.name} </div>
-                    })
+                    context.catigories.map((catigory, index) => (
+                        <div className="catigories__content" key={index}>
+                            <div className="catigory__card" key={index}>
+                                <div className="catigories__image"></div>
+                                <div className="catigory__text">{catigory.name}</div>
+                            </div>
+                        </div>
+                    ))
                 }
-              </Carousel>
-            )}
+            </Carousel>
           </div>
+                
+
         </div>
       )}
     </ProductContext.Consumer>

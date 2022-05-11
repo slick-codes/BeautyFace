@@ -4,7 +4,6 @@
 const  responsive = {
     superLargeDesktop: {
         breakpoint: { max: 4000, min: 950},
-        // partialVisibilityGutter: 40,
         items: 5
     },
     desktop:{
@@ -21,6 +20,8 @@ const  responsive = {
     }
 }
 
+const config = {
+    responsive: responsive
+}
 
-
-export default responsive 
+export default config

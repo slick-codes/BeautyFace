@@ -5,7 +5,7 @@ import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 
 import ProductsContext from "./../context/ProductsData";
-import responsive from "./../config/carousel-options";
+import config from "./../config/product.config";
 
 // Imported Custome Components
 import Product from "./Product";
@@ -52,7 +52,7 @@ const Products = function (props) {
                 </div>
               <div className="recommended__product-container">
                 <Carousel
-                  responsive={responsive}
+                  responsive={config.responsive}
                   autoPlay={false}
                   infinite={false}
                   slidesToSlide={slidePerView}

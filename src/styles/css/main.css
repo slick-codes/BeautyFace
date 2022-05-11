@@ -8,6 +8,7 @@ main{
 .react-multiple-carousel__arrow {
     opacity:.3;
     background-color:black;
+    z-index: 1;
 }
 .react-multiple-carousel__arrow:hover{
     opacity:1;
